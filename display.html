@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Display Chemical</title>
+  </head>
+  <body>
+    <h1>Display Chemical</h1>
+    <form method="post">
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name" required><br><br>
+      <input type="submit" value="Submit">
+    </form>
+
+    {% if chemical_data %}
+      <h2>Chemical Information for {{ name }}</h2>
+      <table>
+        <tr>
+          <td>Location:</td>
+          <td>{{ chemical_data['location'] }}</td>
+        </tr>
+        <tr>
+          <td>Quantity:</td>
+          <td>{{ chemical_data['quantity'] }}</td>
+        </tr>
+        <tr>
+          <td>Formula:</td>
+          <td>{{ chemical_data['formula'] }}</td>
+        </tr>
+        <tr>
+          <td>Expiry Date:</td>
+          <td>{{ chemical_data['expiry_date'] }}</td>
+        </tr>
+        <tr>
+          <td>Manufacturer:</td>
+          <td>{{ chemical_data['manufacturer'] }}</td>
+        </tr>
+      </table>
+    {% elif name %}
+      <p>Chemical '{{ name }}' not found.</p>
+    {% endif %}
+  </body>
+</html>

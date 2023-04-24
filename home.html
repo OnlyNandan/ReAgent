@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chemical Python Program</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<style>
+		.hero-image {
+			background-image: url("https://images.pexels.com/photos/1366942/pexels-photo-1366942.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"); /* Replace with your image */
+			background-size: cover;
+			background-attachment: fixed;
+			background-position: center;
+			min-height: 100vh;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: relative;
+		}
+		.hero-overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.6);
+		}
+		.hero-text {
+			color: white;
+			text-align: center;
+			position: relative;
+			z-index: 1;
+		}
+		.hero-text h1 {
+			font-size: 4rem;
+			margin-bottom: 1rem;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		}
+		.hero-text p {
+			font-size: 1.5rem;
+			margin-bottom: 2rem;
+			text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+		}
+		.hero-buttons {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+		}
+		.hero-buttons a {
+			margin: 0.5rem;
+			padding: 1rem 2rem;
+			font-size: 1.2rem;
+			text-transform: uppercase;
+			letter-spacing: 0.1rem;
+			border-radius: 2rem;
+			box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+			transition: transform 0.2s ease-in-out;
+		}
+		.hero-buttons a:hover {
+			transform: scale(1.1);
+		}
+	</style>
+</head>
+<body>
+	<!-- Hero section -->
+	<section class="hero-image">
+		<div class="hero-overlay"></div>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 mx-auto">
+					<div class="hero-text">
+						<h1>ReAgent</h1>
+						<p>The chemical management solution you've been searching for</p>
+						<div class="hero-buttons">
+							<a href="{{ url_for('input_chemical') }}" class="btn btn-primary">Add Chemical</a>
+							<a href="{{ url_for('display_chemical') }}" class="btn btn-secondary">Display Chemicals</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+<section class="features-section">
+  <div class="container">
+    <h2 class="section-title">Features</h2>
+    <div class="row">
+      <div class="col-md-4 feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3 class="feature-title">Feature 1</h3>
+        <p class="feature-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      </div>
+      <div class="col-md-4 feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3 class="feature-title">Feature 2</h3>
+        <p class="feature-description">Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+      </div>
+      <div class="col-md-4 feature-item">
+        <div class="feature-icon">
+          <i class="fas fa-check"></i>
+        </div>
+        <h3 class="feature-title">Feature 3</h3>
+        <p class="feature-description">Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .features-section {
+	  background-image: url('https://images.pexels.com/photos/7135019/pexels-photo-7135019.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+	  background-size: cover;
+	  background-attachment: fixed;
+	  background-position: center;
+	  padding: 120px 0;
+	}
+
+  .features-section .section-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 50px;
+    text-align: center;
+  }
+
+  .features-section .feature-item {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .features-section .feature-icon {
+    background-color: #007aff;
+    border-radius: 50%;
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 20px;
+    width: 50px;
+  }
+
+  .features-section .feature-icon i {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  .features-section .feature-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .features-section .feature-description {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+</style>
+
+
+
+	<!-- Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script>
+	$(window).scroll(function() {
+	var scrollTop = $(this).scrollTop();
+	$('.hero-image').css('background-position-y', -(scrollTop / 2) + 'px');
+	});
+	</script>
+
+</body>
+</html>
